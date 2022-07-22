@@ -10,4 +10,10 @@
 <body>
     <nav>
         <a href="/">ALL-MANGA</a>
+        <% if (user) { %>
+            <a href="/">My-LIBRARY</a>
+            <a href="/logout">LOG OUT</a>
+        <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
     </nav>
