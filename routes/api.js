@@ -5,25 +5,14 @@ const fetch = require('node-fetch');
 const rootURL = 'https://api.mangadex.org/';
 const token = process.env.GITHUB_TOKEN;
 
-// router.get('/', function(req, res, next) {
-//   // const options ={
-//   //   headers: {
-//   //     Authorization: `token ${token}`
-//   //   }
-//   // const title =  req.query.title
-//   fetch(`${rootURL}manga/`)
-//   .then(res => res.json())
-//   .then(data =>
-//     console.log(data)
-//     // res.render('index', {  data })
-//     )
-// });
+router.get('/', async function(req, res){
+  const response = await fetch(`${rootURL}manga` , {method: 'GET'});
+  const five = await response.json();
+  // console.log(data)
+  const mangas = five.data;
+  res.render('index' , {mangas})
+})
 
-router.get('/', fetch(`${rootURL}manga/`)
-.then(res => res.json())
-.then(data =>
-  console.log(data)
-  // res.render('index', {  data })
-  ))
+
   
 module.exports = router;

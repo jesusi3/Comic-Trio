@@ -46,9 +46,9 @@ app.use(function(req, res, next) {
 const isLoggedIn = require('./config/auth');
 
 
+app.use('/', apiRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', apiRouter);
 
 
 
