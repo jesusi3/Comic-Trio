@@ -3,5 +3,8 @@
     <% data.forEach( x => { %> 
         <a href="/mangas/<%= x._id%>"><h3><%= x.title%></h3>
         </a>
+        <form action="/mangas/<%= x._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+        </form>
     <% })%>
 <%- include("../partials/footer") %>

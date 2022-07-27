@@ -7,7 +7,8 @@ module.exports = {
     index,
     show,
     create,
-    home
+    home,
+    delete: deleteManga
 }
 async function index(req, res) {
     let data = await Manga.find({user: req.user._id});
@@ -36,9 +37,9 @@ async function create(req,res) {
     const five = await response.json();
     const cover = five.data.attributes.fileName;
     art = `https://uploads.mangadex.org/covers/${req.body.mangaId}/${cover}`
-    console.log(art, 'five');
+    // console.log(art, 'five');
     req.body.img = art;
-    console.log(req.body.img, 'image');
+    // console.log(req.body.img, 'image');
     let manga = await new Manga(req.body);
     let two = await manga.save();
     res.redirect('/mangas/home');
@@ -49,4 +50,12 @@ async function home(req, res) {
     const five = await response.json();
     const mangas = five.data;
     res.render('mangas/all', {mangas})
+}
+
+async function deleteManga(req, res) {
+    await Manga.deleteOne({_id: req.params.id});    
+    
+    res.redirect('/mangas');
+
+
 }

@@ -4,10 +4,11 @@ const mangasCtrl = require('../controllers/mangas');
 const isLoggedIn = require('../config/auth');
 /* GET users listing. */
 
-//PATh start witch /mangas
-router.get('/library', mangasCtrl.index);
-router.post('/', isLoggedIn, mangasCtrl.create);
+//PATH start witch /mangas
+router.get('/', mangasCtrl.index);
 router.get('/home', mangasCtrl.home);
 router.get('/:id', isLoggedIn, mangasCtrl.show);
+router.post('/', isLoggedIn, mangasCtrl.create);
+router.delete('/:id', mangasCtrl.delete);
 
 module.exports = router;
