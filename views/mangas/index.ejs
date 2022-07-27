@@ -1,4 +1,7 @@
 <%- include("../partials/header") %>
 <h2>Welcome to your library</h2>
-
+    <% data.forEach( x => { %> 
+        <a href="/mangas/<%= x._id%>"><h3><%= x.title%></h3>
+        </a>
+    <% })%>
 <%- include("../partials/footer") %>

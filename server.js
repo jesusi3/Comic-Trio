@@ -48,7 +48,7 @@ const isLoggedIn = require('./config/auth');
 
 app.use('/', apiRouter);
 app.use('/', indexRouter);
-app.use('/mangas', mangasRouter);
+app.use('/mangas',isLoggedIn, mangasRouter);
 
 
 

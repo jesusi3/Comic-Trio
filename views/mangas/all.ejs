@@ -1,0 +1,19 @@
+<%-  include("../partials/header")  %>
+  <% mangas.forEach(x => { %>
+    <form action="/mangas" method="POST">
+      <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
+      <h3><%= x.attributes.title.en %></h3>
+      <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
+      <h5><%= x.attributes.description.en %></h5>
+      <input type="hidden" name="status" value="<%= x.attributes.status %>">
+      <h5><%= x.attributes.status %></h5>
+    <!-- <h5><%= x.attributes.year%></h5> -->
+      <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
+    <!-- <h1><%= JSON.stringify(x.relationships[2]) %></h1> -->
+    <input type="hidden" name="mangaId" value="<%= x.id %>">
+      <button>X</button>
+    </form>
+   <% })  %>
+
+   
+<%-  include("../partials/footer")  %>
