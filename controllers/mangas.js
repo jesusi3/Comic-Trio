@@ -11,11 +11,11 @@ module.exports = {
     delete: deleteManga
 }
 async function index(req, res) {
-    let data = await Manga.find({user: req.user._id});
+    let data = await Manga.find({ user: req.user._id });
     // console.log(data);
-    res.render('mangas/index', {data})
-    
-    
+    res.render('mangas/index', { data })
+
+
 }
 
 async function show(req, res) {
@@ -24,16 +24,16 @@ async function show(req, res) {
 }
 
 
-async function create(req,res) {
+async function create(req, res) {
     let art;
     req.body.user = req.user._id;
-    req.body.coverArtId = JSON.parse( req.body.coverArtId);
-    req.body.coverArtId.forEach(async function(el){
-        if(el.type === 'cover_art'){
+    req.body.coverArtId = JSON.parse(req.body.coverArtId);
+    req.body.coverArtId.forEach(async function (el) {
+        if (el.type === 'cover_art') {
             req.body.coverId = el.id
         }
     });
-    let response = await fetch(`${rootURL}cover/${req.body.coverId}`, {method: 'GET'});
+    let response = await fetch(`${rootURL}cover/${req.body.coverId}`, { method: 'GET' });
     const five = await response.json();
     const cover = five.data.attributes.fileName;
     art = `https://uploads.mangadex.org/covers/${req.body.mangaId}/${cover}`
@@ -43,17 +43,17 @@ async function create(req,res) {
     let manga = await new Manga(req.body);
     let two = await manga.save();
     res.redirect('/mangas/home');
-   
+
 }
 async function home(req, res) {
-    const response = await fetch(`${rootURL}manga` , {method: 'GET'});
+    const response = await fetch(`${rootURL}manga`, { method: 'GET' });
     const five = await response.json();
     const mangas = five.data;
-    res.render('mangas/all', {mangas})
+    res.render('mangas/all', { mangas })
 }
 
 async function deleteManga(req, res) {
-    await Manga.deleteOne({_id: req.params.id});
+    await Manga.deleteOne({ _id: req.params.id });
     res.redirect('/mangas');
 
 

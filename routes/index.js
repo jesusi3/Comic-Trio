@@ -20,8 +20,8 @@ const passport = require('passport');
 // });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {title: 'Comic-Trio' });
+router.get('/', function (req, res, next) {
+  res.render('index', { title: 'Comic-Trio' });
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -43,8 +43,8 @@ router.get('/oauth2callback', passport.authenticate(
 ));
 
 // Logout route
-router.get('/logout', function(req, res) {
-  req.logout(function(err) {
+router.get('/logout', function (req, res) {
+  req.logout(function (err) {
     res.redirect('/');
   });
 });

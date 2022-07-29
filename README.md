@@ -1,7 +1,8 @@
 # Comic-Trio
 Hello Fellow Manga enthusiast,
 - In Your Journey on Discovering new Mangas. We highly encouarge everyone to have their always try something different, which was brought to you by the Restful API "MANGADEX"!
-- Comic-Trio is a FullStack application where you have a personal Library to do as you please. To access your Library login with your Google email on the top right. When adding a Manga to your library, make sure you keep record by assuring its in your library. - The Web Application offers a user-centric exprience where you won't need to worry about anyone logging in and disrupting your journal/record. Only the User has the ability to add a Manga and or if the manga is not to your liking, your welcome to remove it with only a click of button!
+- Comic-Trio is a FullStack application where you have a personal Library to do as you please. To access your Library login with your Google email on the top right. When adding a Manga to your library, make sure you keep record by assuring its in your library.
+- The Web Application offers a user-centric exprience where you won't need to worry about anyone logging in and disrupting your journal/record. Only the User has the ability to add a Manga and or if the manga is not to your liking, your welcome to remove it with only a click of button!
 ## ScreenShots
 ### landing Page
 ![image](LandingPage.png)
