@@ -192,7 +192,7 @@ main {
 
 .show {
   color: rgb(184, 183, 183);
-  ;
+  padding: 20px;
 }
 
 #kick {
