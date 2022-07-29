@@ -1,13 +1,42 @@
 <%- include("../partials/header") %>
+
 <body>
-    <main>
-<h3><%= datas.title  %></h3>
-<img src="<%= datas.img %>" alt="" class="show-img" referrerpolicy="no-referrer">
-<h2><%=datas.tag%></h2>
-<h4><%= datas.description %></h4>
+    <div class="show12">
+        <main>
 
-    </main>
+
+            <h3 class="show">
+                <%= datas.title %>
+            </h3>
+            <img src="<%= datas.img %>" alt="" class="show-img" referrerpolicy="no-referrer">
+            <h2>
+                <%=datas.tag%>
+            </h2>
+            <div id="kick">
+                <h5 class="show">Status:</h5><span class="show">
+                    <%= datas.status==="" ? "N/A" : datas.status %>
+                </span>&nbsp; || &nbsp;
+                <h5 class="show">Year:</h5><span class="show">
+                    <%= datas.year==="" ? "N/A" : datas.year %>
+                </span>&nbsp; || &nbsp;
+                <h5 class="show">Last Chapter:</h5><span class="show">
+                    <%= datas.lastChapter==="" ? "N/A" : datas.lastChapter %>
+                </span>&nbsp; || &nbsp;
+                <h5 class="show">Genre:</h5><span class="show">
+                    <%= datas.publicationDemographic==="" ? "N/A" : datas.publicationDemographic %>
+                </span>
+                <br>
+
+            </div>
+            <br>
+            <br>
+
+            <article class="show">
+                <h5 class="show">Description:</h5>
+                <%= datas.description %>
+            </article>
+
+        </main>
+    </div>
 </body>
-<%- include("../partials/footer") %>
-
-
+    <%- include("../partials/footer") %>

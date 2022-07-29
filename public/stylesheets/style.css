@@ -8,14 +8,11 @@ body {
  
 }
 
-
-
 .card {
   background: #222;
-  border: 1px solid #dd2476;
+  border: 10px solid #ecb21f;
   color: rgba(111, 169, 23, 0.8);
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 }
 
 .btn {
@@ -27,13 +24,14 @@ body {
   border-image-source:  var(--gradient) !important; 
   text-decoration: none;
   transition: all .4s ease;
+  display: inline-block;
 }
 
 .btn:hover, .btn:focus {
       background: var(--gradient) !important;
   -webkit-background-clip: none !important;
   -webkit-text-fill-color: #fff !important;
-  border: 5px solid #fff !important; 
+  border: 5px solid #ecb21f !important; 
   box-shadow: #222 1px 0 10px;
   text-decoration: underline;
   
@@ -42,11 +40,13 @@ body {
   text-align: center;
   align-items: center;
   font-size: x-large;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 a {
   color: #00B7FF;
   text-decoration: none;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 .login {
@@ -55,6 +55,7 @@ a {
   align-items: center;
   margin-left: auto 5px;
   height: 34px;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 .login img {
@@ -64,15 +65,17 @@ a {
 
 
 nav {
+  /* position: fixed;
+  top: 0; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   font-size: x-large;
+  background-color: #ecb21f;
 }
 .show-img {
-  height: 250px;
-  width: 125px;
+height: 450px;  
 }
 
 .chain {
@@ -143,4 +146,28 @@ nav {
 h1,h4{
   color: white;
   font-weight: bold;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:  3px solid #ecb21f;
+  border-radius: 10px;
+}
+
+.home{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 80vh;
+}
+.home1{
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+.show{
+  color: rgb(184, 183, 183);;
+}
+
+#kick{
+  display: inline-flex;
 }

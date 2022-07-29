@@ -10,15 +10,15 @@
                         <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
                         <span><h4><%= x.attributes.title.en %></h4></span>
                         <br>
-                        <input type="hidden" name="status" value="<%= x.attributes.status %>">
-                        <span><strong> Status:</strong> <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %> </span>
+                        <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
+                        <span><strong> Chapters:</strong> <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %> </span>
                         <input type="hidden" name="publicationDemographic" value="<%= x.attributes.publicationDemographic %>">
                         <span>|| <strong>Genre:</strong> <%=  x.attributes.publicationDemographic  === "" ? "N/A" : x.attributes.publicationDemographic %>  </span>
                         <br>
                         <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
                         <p>Description: <%=  x.attributes.description.en  === "" ? "N/A" : x.attributes.description.en %> </p>
-                        <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
-                        <h4>Chapters: <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %></h4>
+                        <input type="hidden" name="status" value="<%= x.attributes.status %>">
+                        <h4>Status: <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %></h4>
                         <span><button class="btn" id="all-btn"><i class="fab fa-github"></i>Add Manga</button></span>
                         <input type="hidden" name="year" value="<%= x.attributes.year %>">
                         <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">

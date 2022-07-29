@@ -12,11 +12,10 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= x.title%></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><%= x.status%></h6>
-                        <p class="card-text">Some quick example text to build</p>
                         <form action="/mangas/<%= x._id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn mr-2"><i class="fas fa-link"></i>Remove</button>
+                            <span><button type="submit" class="btn mr-2"><i class="fas fa-link"></i>Remove</button></span>
                         </form> 
-                        <a href="/mangas/<%= x._id%>" class="btn "><i class="fab fa-github"></i> Visit Manga</a>
+                        <span><a href="/mangas/<%= x._id%>" class="btn "><i class="fab fa-github"></i>Visit Manga</a></span>
                     </div>
                 </div>
             </div>
