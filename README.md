@@ -29,7 +29,7 @@ Hello Fellow Manga enthusiast,
 ### Link to the Planning Trello Board
 - <a href="https://trello.com/b/EpUeiWzE/project-2" target="_blank">Trello</a>
 
-## Next Steps
+## Next Steps/ ICE box
 - A search functionality where you can search specific manga
 - Comments functionality
 - All around a tags Functionality to fetch mangas with the specific tag
