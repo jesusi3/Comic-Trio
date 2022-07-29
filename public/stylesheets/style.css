@@ -176,6 +176,8 @@ main {
   align-items: center;
   border: 3px solid #ecb21f;
   border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .home {
