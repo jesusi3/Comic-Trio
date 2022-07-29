@@ -1,11 +1,12 @@
 :root {
   --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
 }
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #111 !important;
- 
+
 }
 
 .card {
@@ -21,21 +22,23 @@ body {
   background: var(--gradient) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  border-image-source:  var(--gradient) !important; 
+  border-image-source: var(--gradient) !important;
   text-decoration: none;
   transition: all .4s ease;
   display: inline-block;
 }
 
-.btn:hover, .btn:focus {
-      background: var(--gradient) !important;
+.btn:hover,
+.btn:focus {
+  background: var(--gradient) !important;
   -webkit-background-clip: none !important;
   -webkit-text-fill-color: #fff !important;
-  border: 5px solid #ecb21f !important; 
+  border: 5px solid #ecb21f !important;
   box-shadow: #222 1px 0 10px;
   text-decoration: underline;
-  
+
 }
+
 #title {
   text-align: center;
   align-items: center;
@@ -73,49 +76,59 @@ nav {
   align-items: center;
   font-size: x-large;
   background-color: #ecb21f;
+  text-decoration: none;
 }
+
+a:link {
+  text-decoration: none;
+}
+
 .show-img {
-height: 450px;  
+  height: 450px;
 }
 
 .chain {
   /* height: 3707px; */
   width: 450px;
   border: 3px solid #ecb21f;
-  border-bottom: 0 ;
-  
+  border-bottom: 0;
+
 }
-#topChain{
+
+#topChain {
   border-top: 3px;
-  border-top-left-radius: 20px 20px;;
+  border-top-left-radius: 20px 20px;
+  ;
   border-top-right-radius: 20px 20px;
   /* border-top: 5px;  */
 }
-#btmChain{
+
+#btmChain {
   border-bottom: 3px;
-  border-bottom-left-radius: 20px 20px;;
+  border-bottom-left-radius: 20px 20px;
+  ;
   border-bottom-right-radius: 20px 20px;
   /* border-top: 5px;  */
 }
 
-@media(min-width:568px){
-  .end{
-      margin-left: auto;
+@media(min-width:568px) {
+  .end {
+    margin-left: auto;
   }
 }
 
-@media(max-width:768px){
-  #post{
-      width: 100%;
+@media(max-width:768px) {
+  #post {
+    width: 100%;
   }
 }
 
-.comments{
+.comments {
   margin-top: 5%;
   margin-left: 20px;
 }
 
-.darker{
+.darker {
   border: 3px solid #ecb21f;
   background-color: black;
   float: right;
@@ -125,7 +138,7 @@ height: 450px;
   padding-top: 10px;
 }
 
-.comment{
+.comment {
   border: 1px solid rgba(16, 46, 46, 1);
   background-color: rgba(16, 46, 46, 0.973);
   float: left;
@@ -133,41 +146,53 @@ height: 450px;
   padding-left: 40px;
   padding-right: 30px;
   padding-top: 10px;
-  
+
 }
-.comment h4,.comment span,.darker h4,.darker span{
+
+.comment h4,
+.comment span,
+.darker h4,
+.darker span {
   display: inline;
 }
 
-.comment p,.comment span,.darker p,.darker span{
+.comment p,
+.comment span,
+.darker p,
+.darker span {
   color: rgb(184, 183, 183);
 }
 
-h1,h4{
+h1,
+h4 {
   color: white;
   font-weight: bold;
 }
-main{
+
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border:  3px solid #ecb21f;
+  border: 3px solid #ecb21f;
   border-radius: 10px;
 }
 
-.home{
+.home {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   height: 80vh;
 }
-.home1{
+
+.home1 {
   font-family: 'Mochiy Pop One', sans-serif;
 }
-.show{
-  color: rgb(184, 183, 183);;
+
+.show {
+  color: rgb(184, 183, 183);
+  ;
 }
 
-#kick{
+#kick {
   display: inline-flex;
 }
