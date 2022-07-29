@@ -9,6 +9,6 @@ router.get('/', mangasCtrl.index);
 router.get('/home', mangasCtrl.home);
 router.get('/:id', isLoggedIn, mangasCtrl.show);
 router.post('/', isLoggedIn, mangasCtrl.create);
-router.delete('/:id', mangasCtrl.delete);
+router.delete('/:id',isLoggedIn, mangasCtrl.delete);
 
 module.exports = router;

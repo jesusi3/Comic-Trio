@@ -1,0 +1,88 @@
+<div class="container justify-content-center mt-5 border-left border-right">
+    <% mangas.forEach(x => { %>
+        <form action="/mangas" method="POST"></form>
+            <div class="d-flex justify-content-center py-2">
+                <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
+                <span><h4><%= x.attributes.title.en %></h4></span>
+                <br>
+                <input type="hidden" name="status" value="<%= x.attributes.status %>">
+                <span><strong> Status:</strong> <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %> </span>
+                <input type="hidden" name="publicationDemographic" value="<%= x.attributes.publicationDemographic %>">
+                <span>|| <strong>Genre:</strong> <%=  x.attributes.publicationDemographic  === "" ? "N/A" : x.attributes.publicationDemographic %>  </span>
+                <br>
+                <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
+                <div class="second py-2 px-2"> <span class="text1"><p>Description: <%=  x.attributes.description.en  === "" ? "N/A" : x.attributes.description.en %> </p></span>
+                    <div class="d-flex justify-content-between py-1 pt-2">
+                        <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
+                        <div><span class="text2">Chapters: <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %></span></div>
+                        <div><span class="text3"><button class="btn" id="all-btn"><i class="fab fa-github"></i>Add Manga</button></span><span class="text4">3</span></div>
+                    </div>
+                </div>
+                <input type="hidden" name="year" value="<%= x.attributes.year %>">
+                <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
+                <input type="hidden" name="mangaId" value="<%= x.id %>">
+            </div>
+        </form>
+    <% })  %>
+</div>
+
+<!-- <div class="container justify-content-center mt-5 border-left border-right">
+        <% mangas.forEach(x => { %>
+            <div class="d-flex justify-content-center py-2">
+                <div class="second py-2 px-2"> <span class="text1">
+                        <form action="/mangas" method="POST"></form>
+                        <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
+                        <span><h4><%= x.attributes.title.en %></h4></span>
+                        <br>
+                        <input type="hidden" name="status" value="<%= x.attributes.status %>">
+                        <span><strong> Status:</strong> <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %> </span>
+                        <input type="hidden" name="publicationDemographic" value="<%= x.attributes.publicationDemographic %>">
+                        <span>|| <strong>Genre:</strong> <%=  x.attributes.publicationDemographic  === "" ? "N/A" : x.attributes.publicationDemographic %>  </span>
+                        <br>
+                        <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
+                        <p>Description: <%=  x.attributes.description.en  === "" ? "N/A" : x.attributes.description.en %> </p></span>
+                        <div class="d-flex justify-content-between py-1 pt-2">
+                            <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
+                            <div><span class="text2">Chapters: <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %></span></div>
+                            <div><span class="text3"><button type="submit" class="btn">Add Manga</button></span></div>
+                        </div>
+                        <input type="hidden" name="year" value="<%= x.attributes.year %>">
+                        <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
+                        <input type="hidden" name="mangaId" value="<%= x.id %>">
+                    </form>
+                    </div>
+                </div>
+            <% })  %>
+        </div> -->
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6 col-12 pb-4">
+            <% mangas.forEach(x => { %>
+                <form action="/mangas" method="POST">
+ 
+                <div class="darker mt-4 text-justify">
+                    <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
+                    <span><h4><%= x.attributes.title.en %></h4></span>
+                    <br>
+                    <input type="hidden" name="status" value="<%= x.attributes.status %>">
+                    <span><strong> Status:</strong> <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %> </span>
+                    <input type="hidden" name="publicationDemographic" value="<%= x.attributes.publicationDemographic %>">
+                    <span>|| <strong>Genre:</strong> <%=  x.attributes.publicationDemographic  === "" ? "N/A" : x.attributes.publicationDemographic %>  </span>
+                    <br>
+                    <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
+                    <p>Description: <%=  x.attributes.description.en  === "" ? "N/A" : x.attributes.description.en %> </p>
+                    <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
+                    <h4>Chapters: <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %></h4>
+                    <span><button class="btn" id="all-btn"><i class="fab fa-github"></i>Add Manga</button></span>
+                    <input type="hidden" name="year" value="<%= x.attributes.year %>">
+                    <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
+                    <input type="hidden" name="mangaId" value="<%= x.id %>">
+                </div>
+                </form>
+            <% })  %>
+        </div>
+    </div>
+</div> -->

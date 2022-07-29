@@ -1,19 +1,44 @@
 <%-  include("../partials/header")  %>
-  <% mangas.forEach(x => { %>
-    <form action="/mangas" method="POST">
-      <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
-      <h3><%= x.attributes.title.en %></h3>
-      <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
-      <h5><%= x.attributes.description.en %></h5>
-      <input type="hidden" name="status" value="<%= x.attributes.status %>">
-      <h5><%= x.attributes.status %></h5>
-    <!-- <h5><%= x.attributes.year%></h5> -->
-      <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
-    <!-- <h1><%= JSON.stringify(x.relationships[2]) %></h1> -->
-    <input type="hidden" name="mangaId" value="<%= x.id %>">
-      <button>X</button>
-    </form>
-   <% })  %>
+<body id="all">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-6 col-12 pb-4">
+                <% mangas.forEach(x => { %>
+                    <form action="/mangas" method="POST">
+     
+                    <div class="darker mt-4 text-justify">
+                        <input type="hidden" name="title" value="<%= x.attributes.title.en %>">
+                        <span><h4><%= x.attributes.title.en %></h4></span>
+                        <br>
+                        <input type="hidden" name="status" value="<%= x.attributes.status %>">
+                        <span><strong> Status:</strong> <%=  x.attributes.status  === "" ? "N/A" : x.attributes.status %> </span>
+                        <input type="hidden" name="publicationDemographic" value="<%= x.attributes.publicationDemographic %>">
+                        <span>|| <strong>Genre:</strong> <%=  x.attributes.publicationDemographic  === "" ? "N/A" : x.attributes.publicationDemographic %>  </span>
+                        <br>
+                        <input type="hidden" name="description" value="<%= x.attributes.description.en %>" >
+                        <p>Description: <%=  x.attributes.description.en  === "" ? "N/A" : x.attributes.description.en %> </p>
+                        <input type="hidden" name="lastChapter" value="<%= x.attributes.lastChapter %>">
+                        <h4>Chapters: <%=  x.attributes.lastChapter  === "" ? "N/A" : x.attributes.lastChapter %></h4>
+                        <span><button class="btn" id="all-btn"><i class="fab fa-github"></i>Add Manga</button></span>
+                        <input type="hidden" name="year" value="<%= x.attributes.year %>">
+                        <input type="hidden" name="coverArtId" value="<%=  JSON.stringify(x.relationships) %>">
+                        <input type="hidden" name="mangaId" value="<%= x.id %>">
+                    </div>
+                    </form>
+                <% })  %>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
 
-   
-<%-  include("../partials/footer")  %>
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/1613967899056204962/D265CD490DBC536BEF3A8D5BF0CE38CDE5994595/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="" referrerpolicy="no-referrer" class="chain" id="topChain">
+            <img src="https://media.pitchfork.com/photos/61d604f85f5224f52f19c4b1/1:1/w_450%2Cc_limit/a0071382568_10.jpeg" alt="" referrerpolicy="no-referrer" class="chain">
+            <img src="https://pbs.twimg.com/profile_images/1385867976927293440/27u67oSG_400x400.jpg" alt="" referrerpolicy="no-referrer" class="chain">
+            <img src="https://wallpapers.com/images/high/one-piece-manga-panel-cover-30an272qy13w952e.jpg" alt="" referrerpolicy="no-referrer" class="chain">
+            <img src="https://i.pinimg.com/236x/3d/a4/37/3da437e48ff89ef53a7387d2068ee406.jpg" alt="" referrerpolicy="no-referrer" class="chain">
+            <img src="https://pbs.twimg.com/media/FHmZCr9XIAA_p-X?format=jpg&name=900x900" alt="" referrerpolicy="no-referrer" class="chain">
+            <img src="https://preview.redd.it/j6dy5y3rgpg11.jpg?auto=webp&s=32ce68a1ef167cd56ae62c73aad4ff0226054503" alt="" referrerpolicy="no-referrer" class="chain" id="btmChain">
+            </div>
+        </div>
+    </div>
+     
+</body>
+    <%-  include("../partials/footer")  %>

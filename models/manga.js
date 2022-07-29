@@ -10,6 +10,9 @@ const mangaSchema = new Schema({
     img: String,
     description: String,
     status: String,
+    publicationDemographic: String,
+    year: String,
+    lastChapter: String,
     tags: [{type: Schema.Types.ObjectId, ref:'Tag'}],
     user: {
         type: Schema.Types.ObjectId , ref: "User"

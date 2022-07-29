@@ -53,8 +53,7 @@ async function home(req, res) {
 }
 
 async function deleteManga(req, res) {
-    await Manga.deleteOne({_id: req.params.id});    
-
+    await Manga.deleteOne({_id: req.params.id});
     res.redirect('/mangas');
 
 
