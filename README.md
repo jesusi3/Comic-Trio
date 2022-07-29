@@ -23,5 +23,15 @@ Comic-Trio is a FullStack application where you have a personal Journal in where
 - Bootstrap
 - Javascript
 
-### Getting Strated
-<a href="https://comic-trio.herokuapp.com/" target="_blank"> Link to Comic-Trio</a>
+## Getting Strated
+### Link to the Developed FullStack Application
+- <a href="https://comic-trio.herokuapp.com/" target="_blank"> Comic-Trio</a>
+### Link to the Planning Trello Board
+- <a href="https://trello.com/b/EpUeiWzE/project-2" target="_blank">Trello</a>
+
+## Next Steps
+- A search functionality where you can search specific manga
+- Comments functionality
+- All around a tags Functionality to fetch mangas with the specific tag
+
+
